@@ -1,0 +1,3 @@
+#! /bin/bash
+
+magick -size "${ hwinfo --monitor | grep -P -m 1 -o '(?<=Resolution: )\d+x\d+'; }" "xc:${1}" "${1}.png"
